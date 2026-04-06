@@ -82,7 +82,7 @@ class ModuleServiceProvider extends ServiceProvider{
         }
         // Khai báo views
         if(File::exists($modulePath.'/resources/views')) {
-            $this->loadViewsFrom($modulePath.'/resources/views', $module);
+            $this->loadViewsFrom($modulePath.'/resources/views', strtolower($module));
             $this->loadJsonTranslationsFrom($modulePath.'/resources/lang');
         }
         // Khai báo helper

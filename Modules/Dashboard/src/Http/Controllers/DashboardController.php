@@ -2,6 +2,8 @@
 namespace Modules\dashboard\src\http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class DashboardController extends Controller{
     public function index(){
