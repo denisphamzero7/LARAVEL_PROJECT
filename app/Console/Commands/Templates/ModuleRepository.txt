@@ -1,0 +1,16 @@
+<?php
+
+namespace Modules\{module}\src\Repositories;
+
+use App\Repositories\BaseRepository;
+use Modules\{module}\src\Models\{module};
+
+class {module}Repository extends BaseRepository
+{
+    public function __construct({module} $model)
+    {
+        parent::__construct($model);
+    }
+
+    // Define your repository methods here
+}

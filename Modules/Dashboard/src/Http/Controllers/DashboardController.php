@@ -1,12 +1,12 @@
 <?php
-namespace Modules\user\src\http\Controllers;
-use Modules\user\src\http\Models\User;
+namespace Modules\dashboard\src\http\Controllers;
+
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
-class UserController extends Controller{
+
+class DashboardController extends Controller{
     public function index(){
-        $page_title = 'Danh sách user 123';
-        return view('user::lists', compact('page_title'));
+        $page_title = 'Tổng quan dashboard';
+        return view('dashboard::index', compact('page_title'));
     }
     public function detail($id){
         return 'detail' .$id;

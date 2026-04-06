@@ -64,6 +64,13 @@ class ModuleServiceProvider extends ServiceProvider{
         // Khai báo routes
         if(File::exists($modulePath.'/routes/routes.php')) {
             $this->loadRoutesFrom($modulePath.'/routes/routes.php');
+        } else {
+            if(File::exists($modulePath.'/routes/web.php')) {
+                $this->loadRoutesFrom($modulePath.'/routes/web.php');
+            }
+            if(File::exists($modulePath.'/routes/api.php')) {
+                $this->loadRoutesFrom($modulePath.'/routes/api.php');
+            }
         }
         // khai báo migrations
         if(File::exists($modulePath.'/migrations')) {

@@ -21,9 +21,9 @@ use Illuminate\Support\Facades\Route;
 // Route::middleware('demo')->get('/user',[UserController::class,'index']);
 
 Route::group(['namespace' => 'Modules\user\src\http\Controllers'], function () {
-    Route::prefix('user')->group(function () {
-        Route::get('/', 'UserController@index');
-        Route::get('/detail/{id}', 'UserController@detail');
-        Route::get('/create', 'UserController@create');
+    Route::prefix('admin')->group(function () {
+        Route::prefix('user')->group(function(){
+            Route::get('/', 'UserController@index')->name('users.index');
+        });
     });
 });
